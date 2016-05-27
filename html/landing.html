@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>DC Train Tracker</title>
-</head>
-<body>
+
 
   <p>Find your next train.</p>
   <p>Select station:</p>
 
   <form action="getStation">
   <select>
-<!-- add ng-repeat for stations here -->
+    <option data-ng-repeat="station in landingVm.data">
+      {{station}}
+    </option>
   </select>
   <input type="submit" value="Find your station" />
   </form>
-
-</body>
-</html>

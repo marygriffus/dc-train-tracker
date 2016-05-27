@@ -3,11 +3,12 @@
 (function(){
   angular
   .module('dc-train-tracker', [
-    'ui.router'
+    "ui.router",
+    "ngResource"
   ])
   .config([
-    '$stateProvider',
-    '$urlRouterProvider',
+    "$stateProvider",
+    "$urlRouterProvider",
     Router
   ]);
 
@@ -18,9 +19,13 @@
       templateUrl: "../html/landing.html",
       controller: "landingController",
       controllerAs: "landingVm"
+    })
+    .state("show", {
+      url: "/:station",
+      templateUrl: "../html/show.html",
+      controller: "showController",
+      controllerAs: "showVm"
     });
   }
 
-
-
-})()
+})();
