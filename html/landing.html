@@ -1,13 +1,9 @@
 
-
   <p>Find your next train.</p>
   <p>Select station:</p>
 
-  <form action="getStation">
-  <select>
-    <option data-ng-repeat="station in landingVm.data">
-      {{station}}
-    </option>
+  <select data-ng-model="landingVm.station" data-ng-options="station.name for station in landingVm.data">
+    {{station}}
+  <option value="">Select station</option>
   </select>
-  <input type="submit" value="Find your station" />
-  </form>
+  <button data-ng-click="landingVm.getStation()">Find your station</button>

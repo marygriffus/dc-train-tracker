@@ -8,11 +8,14 @@
   ])
   .config([
     "$stateProvider",
+    "$locationProvider",
     "$urlRouterProvider",
     Router
   ]);
 
-  function Router($stateProvider, $urlRouterProvider){
+
+  function Router($stateProvider, $locationProvider, $urlRouterProvider){
+    $locationProvider.html5Mode(true);
     $stateProvider
     .state("landing", {
       url: "/",
