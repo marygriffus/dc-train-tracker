@@ -13,7 +13,6 @@
     Router
   ]);
 
-
   function Router($stateProvider, $locationProvider, $urlRouterProvider){
     $locationProvider.html5Mode(true);
     $stateProvider

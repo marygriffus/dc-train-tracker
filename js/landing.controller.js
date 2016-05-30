@@ -5,19 +5,21 @@
   .module("dc-train-tracker")
   .controller("landingController", [
     "$location",
+    "stationFactory",
     landingControllerFunc
   ]);
 
-  function landingControllerFunc($location){
+  function landingControllerFunc($location, stationFactory){
     var landingVm = this;
-    landingVm.data = [
-      {name: "Tenleytown"},
-      {name: "Van Ness"},
-      {name: "Cleveland Park"},
-      {name: "Woodley Park"}
-    ]
+
+    //populate the dropdown
+    stationFactory
+    .then(function(res){
+      landingVm.data = res.data['Stations']
+    })
+
     landingVm.getStation = function(){
-      $location.path(landingVm.station.name)
+      $location.path(landingVm.station.Name)
     }
   }
 
