@@ -19,7 +19,7 @@
     })
 
     landingVm.getStation = function(){
-      $location.path(landingVm.station.Name)
+      $location.path(landingVm.station.Code)
     }
   }
 
