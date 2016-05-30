@@ -1,1 +1,9 @@
 <p>This is the show page for {{showVm.station}}</p>
+
+<div data-ng-if="showVm.trains" data-ng-repeat="train in showVm.trains">
+  <h4>Train:</h4>
+  <p>Line: {{train.Line}}</p>
+  <p>Destination: {{train.DestinationName}}</p>
+  <p>{{train.Car}} cars</p>
+  <p>Arriving in: {{train.Min}} minutes</p>
+</div>

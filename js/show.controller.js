@@ -21,6 +21,7 @@
     $http.get(url)
     .then(function(res){
       console.log(res.data['Trains'])
+      showVm.trains = res.data['Trains']
     })
   }
 
