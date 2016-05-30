@@ -12,6 +12,7 @@
   function showControllerFunc($stateParams, $http){
     var showVm = this;
     showVm.station = $stateParams.station;
+    showVm.stationName = '';
 
     var url = "https://api.wmata.com/StationPrediction.svc/json/GetPrediction/"
     url += showVm.station
@@ -22,6 +23,7 @@
     .then(function(res){
       console.log(res.data['Trains'])
       showVm.trains = res.data['Trains']
+      showVm.stationName = showVm.trains[0]['LocationName']
     })
   }
 
