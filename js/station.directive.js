@@ -3,9 +3,9 @@
 (function(){
   angular
   .module("dc-train-tracker")
-  .directive("train", function(){
+  .directive("station", function(){
     return {
-      templateUrl: "../html/train.html",
+      templateUrl: "../html/station.html",
       scope: true,
       restrict: 'AE'
     }

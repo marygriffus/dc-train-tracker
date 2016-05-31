@@ -1,7 +1,8 @@
-<div class="train">
-  <h4>Train:</h4>
-  <p>Line: {{train.Line}}</p>
-  <p>Destination: {{train.DestinationName}}</p>
-  <p data-ng-if="train.Car">{{train.Car}} cars</p>
-  <p>Arriving in: {{train.Min}} minutes</p>
+<div class="train clearfix" data-ng-if="train.Line" data-ng-style="{'backgroundColor':train.color, 'border':train.border}">
+  <h5 class="train-header">Train:</h5>
+  <div class="left">Line: {{train.Line}}</div>
+  <div class="right">{{train.Car}} cars</div>
+  <div class="left" data-ng-if='train.Min.length >= 3'>At station</div>
+  <div class="left" data-ng-if="train.Min.length < 3">Arriving in {{train.Min}} minutes</div>
+  <div class="right">Destination: {{train.DestinationName}}</div>
 </div>

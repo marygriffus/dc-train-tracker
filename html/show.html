@@ -1,6 +1,11 @@
-<h2>{{showVm.stationName}}</h2>
-
-<h3>Next Trains:</h3>
-<div data-ng-if="showVm.trains" data-ng-repeat="train in showVm.trains">
-<train></train>
+<station>
+</station>
+<div data-ng-if="showVm.tab=='next'" data-ng-repeat="train in showVm.trains">
+  <train></train>
+</div>
+<div data-ng-if="showVm.tab=='alerts'" data-ng-repeat="incident in showVm.incidents">
+  <alert></alert>
+</div>
+<div data-ng-if="showVm.tab=='notes'">
+  Notes are here!
 </div>

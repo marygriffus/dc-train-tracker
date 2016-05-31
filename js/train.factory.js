@@ -6,6 +6,8 @@
   .factory("trainFactory", ["$http", trainFactoryFunc])
 
   function trainFactoryFunc($http){
+    function get(station) {
 
+    }
   }
 })();

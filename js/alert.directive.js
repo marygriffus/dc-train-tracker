@@ -3,9 +3,9 @@
 (function(){
   angular
   .module("dc-train-tracker")
-  .directive("train", function(){
+  .directive("alert", function(){
     return {
-      templateUrl: "../html/train.html",
+      templateUrl: "../html/alert.html",
       scope: true,
       restrict: 'AE'
     }
