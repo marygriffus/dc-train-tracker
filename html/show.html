@@ -1,3 +1,12 @@
+
+<h3><a href="/">DC Train Tracker</a></h3>
+<select data-ng-model="showVm.station" data-ng-options="station.Name for station in showVm.data">
+  {{station}}
+<option value="">Select station</option>
+</select><br>
+<button data-ng-click="showVm.getStation()">Switch stations</button>
+
+
 <station>
 </station>
 <div data-ng-if="showVm.tab=='next'" data-ng-repeat="train in showVm.trains">

@@ -46,7 +46,7 @@ a{
 .train,
 .alert{
   border: 2px solid white;
-  outline: 4px solid #413424;
+  outline: 5px solid #413424;
   margin: 10px auto;
   width: 66%;
 }
