@@ -6,26 +6,27 @@
   .controller("showController", [
     "$stateParams",
     "$http",
+    "trainFactory",
     showControllerFunc
   ]);
 
-  function showControllerFunc($stateParams, $http){
+  function showControllerFunc($stateParams, $http, trainFactory){
     var showVm = this;
     showVm.station = $stateParams.station;
     showVm.stationName = '';
     showVm.tab = 'next';
     showVm.lines = [];
 
-    var urlT = "https://api.wmata.com/StationPrediction.svc/json/GetPrediction/"
-    urlT += showVm.station
-    urlT += "?api_key=e9e713e3d5d74a8fa4df1ab3ab9e5fdb";
-    urlT += "&callbackname=JSON_CALLBACK";
+    // var urlT = "https://api.wmata.com/StationPrediction.svc/json/GetPrediction/"
+    // urlT += showVm.station
+    // urlT += "?api_key=e9e713e3d5d74a8fa4df1ab3ab9e5fdb";
+    // urlT += "&callbackname=JSON_CALLBACK";
 
     var urlA = "https://api.wmata.com/Incidents.svc/json/Incidents"
     urlA += "?api_key=e9e713e3d5d74a8fa4df1ab3ab9e5fdb";
     urlA += "&callbackname=JSON_CALLBACK";
 
-    $http.get(urlT)
+    trainFactory.get($stateParams.station)
     .then(function(res){
       var colorTrans = {
         "BL": "rgba(0, 150, 214, 0.6)",
