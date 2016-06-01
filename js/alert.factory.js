@@ -29,8 +29,35 @@
             incidents[i].LinesAffected = proc;
           }
           if (!alerting){
+            var colorDisp = {
+              "BL": "Blue",
+              "GR": "Green",
+              "OR": "Orange",
+              "RD": "Red",
+              "SV": "Silver",
+              "YL": "Yellow"
+            }
+            var linesNotAffected = "No alerts at this time for the"
+            if (lines.length == 1){
+              linesNotAffected += ' ' + colorDisp[lines[0]] + ' Line.';
+            }
+            else if (lines.length == 2){
+              linesNotAffected += ' ' + colorDisp[lines[0]] + ' or ' + colorDisp[lines[1]] + ' Lines.';
+            }
+            else{
+              for(var i = 0; i<lines.length; i++){
+                if (i == (lines.length-1)){
+                  linesNotAffected += ' or ' + colorDisp[lines[i]];
+                }
+                else{
+                  linesNotAffected += ' ' + colorDisp[lines[i]] + ',';
+                }
+              }
+              linesNotAffected += ' Lines.';
+            }
+
             incidents.push({
-              Description: "No alerts at this time.",
+              Description: linesNotAffected,
               LinesAffected: "None",
               relevance: true
             })

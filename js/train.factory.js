@@ -35,7 +35,7 @@
           for (var i=0; i < trains.length; i++){
             trains[i].color = colorTrans[trains[i]["Line"]];
             trains[i].colorDisp = colorDisp[trains[i]["Line"]];
-            if (lines.indexOf(trains[i]["Line"]) === -1){
+            if (colorDisp[trains[i]["Line"]] && (lines.indexOf(trains[i]["Line"]) === -1)){
               lines.push(trains[i]["Line"]);
             }
           }

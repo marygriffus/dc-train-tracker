@@ -37,6 +37,8 @@ a{
   text-align: center;
   border: 5px solid #413424;
   box-sizing: border-box;
+  font-weight: bold;
+  padding: .33em;
 }
 
 .tab:hover{
