@@ -23,11 +23,12 @@
               proc[j] = proc[j].replace(/;+$/, "");
               if (lines.indexOf(proc[j]) != -1){
                 incidents[i].relevance = true;
+                var alerting = true;
               }
             }
             incidents[i].LinesAffected = proc;
           }
-          if (incidents.length < 1){
+          if (!alerting){
             incidents.push({
               Description: "No alerts at this time.",
               LinesAffected: "None",
