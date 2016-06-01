@@ -16,5 +16,14 @@
   <alert></alert>
 </div>
 <div data-ng-if="showVm.tab=='notes'">
-  Notes are here!
+  <div class="note">
+    <h3>Leave a note</h3>
+    <form>
+      <input value="showVm.newNote.title" data-ng-model="showVm.newNote.title" placeholder="Title"></input>
+      <input value="showVm.newNote.author" data-ng-model="showVm.newNote.author" placeholder="Author"></input>
+      <input value="showVm.newNote.body" data-ng-model="showVm.newNote.body" placeholder="Note"></input>
+      <button data-ng-click="showVm.create({title: showVm.newNote.title, author: showVm.newNote.author, body: showVm.newNote.body})">Leave note</button>
+    </form>
+  </div>
+  <note data-ng-repeat="note in showVm.notes"></note>
 </div>

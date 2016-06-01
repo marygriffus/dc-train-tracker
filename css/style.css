@@ -46,15 +46,22 @@ a{
 }
 
 .train,
-.alert{
+.alert,
+.note{
   border: 2px solid white;
   outline: 5px solid #413424;
   margin: 10px auto;
   width: 66%;
 }
 
-.train-header{
+.train-header,
+.note-header{
   margin: 5px 0 0 10px;
+}
+
+.note p{
+  width: 90%;
+  padding: 5px 15px;
 }
 
 .left,

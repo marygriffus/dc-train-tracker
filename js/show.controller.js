@@ -7,13 +7,15 @@
     "$stateParams",
     "$http",
     "$location",
+    "$resource",
     "stationFactory",
     "trainFactory",
     "alertFactory",
+    "noteFactory",
     showControllerFunc
   ]);
 
-  function showControllerFunc($stateParams, $http, $location, stationFactory, trainFactory, alertFactory){
+  function showControllerFunc($stateParams, $http, $location, $resource, stationFactory, trainFactory, alertFactory, noteFactory){
     var showVm = this;
     showVm.station = $stateParams.station;
     showVm.stationName = '';
@@ -43,5 +45,30 @@
     .then(function(res){
       showVm.incidents = res
     })});
+
+    noteFactory.query(function(res){
+      showVm.notes = [];
+      res.forEach(function(note){
+        if (note.station == showVm.station){
+          showVm.notes.push(note)
+        }
+      })
+    })
+
+    showVm.destroy = function(note){
+      noteFactory.delete({id: note});
+    }
+
+    showVm.newNote = new noteFactory();
+    showVm.create = function(obj){
+      showVm.newNote.title = obj.title;
+      showVm.newNote.author = obj.author;
+      showVm.newNote.body = obj.body;
+      showVm.newNote.station = showVm.station;
+      showVm.newNote.$save();
+      showVm.notes.push(showVm.newNote)
+    }
+
+
   }
 })();
