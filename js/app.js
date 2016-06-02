@@ -18,13 +18,13 @@
     $stateProvider
     .state("landing", {
       url: "/",
-      templateUrl: "../html/landing.html",
+      templateUrl: "dc-train-tracker/html/landing.html",
       controller: "landingController",
       controllerAs: "landingVm"
     })
     .state("show", {
       url: "/:station",
-      templateUrl: "../html/show.html",
+      templateUrl: "dc-train-tracker/html/show.html",
       controller: "showController",
       controllerAs: "showVm"
     });
