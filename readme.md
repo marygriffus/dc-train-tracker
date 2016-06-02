@@ -1,1 +1,1 @@
-![It's trains!](../train-screenshot.png)
+![It's trains!](./train-screenshot.png)
