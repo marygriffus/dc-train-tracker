@@ -28,6 +28,8 @@
       controller: "showController",
       controllerAs: "showVm"
     });
+    $urlRouterProvider
+    .otherwise("/")
   }
 
 })();
