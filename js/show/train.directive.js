@@ -5,7 +5,7 @@
   .module("dc-train-tracker")
   .directive("train", function(){
     return {
-      templateUrl: "dc-train-tracker/html/train.html",
+      templateUrl: "html/train.html",
       scope: true,
       restrict: 'AE'
     }
