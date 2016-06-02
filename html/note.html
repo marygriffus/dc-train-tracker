@@ -1,6 +1,6 @@
 <div class="note" data-ng-if="!note.destroyed">
   <h4 class="note-header">{{note.title}}</h4>
-  <p data-ng-if="note.date">{{note.date}}</p>
+  <p>{{note.created_at}}</p>
   <p>{{note.author}} said:</p>
   <p>{{note.body}}</p>
   <button data-ng-click="showVm.destroy(note.id); note.destroyed = true">Delete</button>

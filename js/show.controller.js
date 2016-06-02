@@ -65,6 +65,12 @@
       showVm.newNote.author = obj.author;
       showVm.newNote.body = obj.body;
       showVm.newNote.station = showVm.station;
+      showVm.newNote.rawDate = new Date();
+      var day = showVm.newNote.rawDate.getDate();
+      var month = showVm.newNote.rawDate.getMonth() + 1;
+      var year = showVm.newNote.rawDate.getFullYear();
+      showVm.newNote.created_at = month + '/' + day + '/' + year
+      console.log(showVm.newNote.created_at)
       showVm.newNote.$save();
       showVm.notes.push(showVm.newNote)
     }
