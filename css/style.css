@@ -83,6 +83,10 @@ a {
   body {
     display: block;
     height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 10px;
   }
 
   .train,
@@ -99,7 +103,6 @@ a {
 
   .lander {
     width: 95vw;
-    height: 100%;
   }
 
   .left,
