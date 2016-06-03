@@ -1,14 +1,35 @@
 body {
   background-color: #413424;
-  background-image: url(http://i.imgur.com/nr3Hmbv.jpg);
+  /*background-image: url(http://i.imgur.com/nr3Hmbv.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center;*/
   color: white;
   box-sizing: border-box;
   font-family: sans-serif;
+}
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  z-index: -1;
 }
 
 a {
@@ -81,10 +102,6 @@ a {
 }
 
 @media (max-width: 600px) {
-  html {
-    overflow: auto;
-  }
-
   body {
     display: block;
     height: 100%;
@@ -95,7 +112,7 @@ a {
   .alert,
   .note,
   .station {
-    width: 90vw;
+    width: 90%;
     margin: 10px auto;
   }
 
@@ -104,8 +121,7 @@ a {
   }
 
   .lander {
-    width: 95vw;
-    height: 100%;
+    width: 95%;
   }
 
   .left,
