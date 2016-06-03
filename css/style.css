@@ -85,7 +85,8 @@ a {
 
   .train,
   .alert,
-  .note {
+  .note,
+  .station {
     width: 90vw;
     margin: 10px auto;
   }
