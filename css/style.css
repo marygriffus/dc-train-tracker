@@ -29,11 +29,11 @@ body {
   margin: auto;
   min-width: 50%;
   min-height: 50%;
-  z-index: -1;
 }
 
 .main {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
 }
 
 a {
