@@ -1,8 +1,12 @@
 <div class="train clearfix" data-ng-if="train.Line" data-ng-style="{'backgroundColor':train.color, 'border':train.border}">
   <h5 class="train-header">Train:</h5>
-  <div class="left">Destination: {{train.DestinationName}}</div>
-  <div class="right">{{train.colorDisp}} Line</div>
-  <div class="left" data-ng-if='train.Min.length >= 3'>At station</div>
-  <div class="left" data-ng-if="train.Min.length < 3">Arriving in {{train.Min}} minutes</div>
-  <div class="right">{{train.Car}} cars</div>
+  <div class="left">
+    <div>Destination: {{train.DestinationName}}</div>
+    <div data-ng-if='train.Min.length >= 3'>At station</div>
+    <div data-ng-if="train.Min.length < 3">Arriving in {{train.Min}} minutes</div>
+  </div>
+  <div class="right">
+    <div>{{train.colorDisp}} Line</div>
+    <div>{{train.Car}} cars</div>
+  </div>
 </div>
