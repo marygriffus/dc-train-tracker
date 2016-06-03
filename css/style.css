@@ -82,11 +82,8 @@ a {
 @media (max-width: 600px) {
   body {
     display: block;
-    height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    margin-bottom: 10px;
+    background-size: contain;
+    background-position: center;
   }
 
   .train,
