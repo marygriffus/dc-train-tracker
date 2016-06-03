@@ -92,7 +92,11 @@ a {
   }
 
   .tab {
-    height: 2.5em;
+    height: 4em;
+  }
+
+  .lander {
+    width: 100vw;
   }
 
   .left,
