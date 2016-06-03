@@ -3,8 +3,8 @@ DC Train Tracker
 
 ### Overview
 
-Screenshot from app:
 ![It's trains!](./train-screenshot.png)
+Screenshot from app
 
 This app uses AngularJS to pull information on the DC Metro system and make it accessible to users. It also has a Ruby on Rails backend (https://github.com/marygriffus/dc-train-tracker-api) to store user comments for different rail stations.
 
