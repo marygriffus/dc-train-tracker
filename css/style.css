@@ -2,6 +2,7 @@ body {
   background-color: #413424;
   background-image: url(http://i.imgur.com/nr3Hmbv.jpg);
   background-repeat: no-repeat;
+  background-size: 100%;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
