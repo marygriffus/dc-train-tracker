@@ -18,7 +18,7 @@ a {
 .lander {
   width: 50%;
   text-align: center;
-  margin: 30vh auto;
+  margin: 30vh auto auto auto;
 }
 
 .clearfix {
@@ -81,7 +81,7 @@ a {
 
 @media (max-width: 600px) {
   html {
-    overflow: auto;  
+    overflow: auto;
   }
 
   body {
