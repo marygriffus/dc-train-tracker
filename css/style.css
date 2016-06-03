@@ -91,6 +91,10 @@ a {
     margin: 10px auto;
   }
 
+  .tab {
+    height: 2.5em;
+  }
+
   .left,
   .right {
     width: 80%;
