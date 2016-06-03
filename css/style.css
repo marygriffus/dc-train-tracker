@@ -82,6 +82,7 @@ a {
 @media (max-width: 600px) {
   body {
     display: block;
+    height: 100vh;
   }
 
   .train,
