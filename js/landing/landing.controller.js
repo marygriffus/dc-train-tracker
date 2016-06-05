@@ -41,6 +41,7 @@
       var names = [];
       for (var i = 0; i < landingVm.data.length; i++){
         if (landingVm.data[i].Name in names){
+          console.log('multiple names')
           landingVm.data[i-1].Name += landingVm.getLines(landingVm.data[i-1]);
           landingVm.data[i].Name += landingVm.getLines(landingVm.data[i]);
         }
