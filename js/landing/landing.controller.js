@@ -21,10 +21,10 @@
         "YL": "Yellow"
       };
       var lines = '';
-      for (var i = 0; i <=4; i++){
-        if (station[LineCode + i]){
-          console.log('here' + station[LineCode + i])
-          lines += ' ' + colorDisp[station[LineCode + i]]
+      for (var j = 0; j <=4; j++){
+        if (station[LineCode + j]){
+          console.log('here' + station[LineCode + j])
+          lines += ' ' + colorDisp[station[LineCode + j]]
         }
       }
       return  '(' + lines + ' )';
