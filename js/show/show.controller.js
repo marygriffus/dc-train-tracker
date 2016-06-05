@@ -62,11 +62,11 @@
     showVm.newNote = new noteFactory();
     showVm.create = function(){
       showVm.newNote.station = showVm.station;
-      
+
       var rawDate = new Date();
-      var day = showVm.newNote.rawDate.getDate();
-      var month = showVm.newNote.rawDate.getMonth() + 1;
-      var year = showVm.newNote.rawDate.getFullYear();
+      var day = rawDate.getDate();
+      var month = rawDate.getMonth() + 1;
+      var year = rawDate.getFullYear();
 
       showVm.newNote.created_at = month + '/' + day + '/' + year
       console.log(showVm.newNote.created_at)
