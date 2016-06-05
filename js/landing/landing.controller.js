@@ -20,8 +20,6 @@
       })
 
       // add lines for stations with multiple tracksets
-      var names = [];
-
       function getLines(station){
         var colorDisp = {
           "BL": "Blue",
@@ -40,6 +38,7 @@
         return  '(' + lines + ' )';
       }
 
+      var names = [];
       for (var i = 0; i < landingVm.data.length; i++){
         if (landingVm.data[i].Name in names){
           landingVm.data[i-1].Name += getLines(landingVm.data[i-1]);
