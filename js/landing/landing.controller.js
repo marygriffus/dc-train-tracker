@@ -11,7 +11,6 @@
 
   function landingControllerFunc($location, stationFactory){
     var landingVm = this;
-    landingVm.displayLines = ''
 
     //populate the dropdown
     stationFactory
@@ -19,16 +18,39 @@
       landingVm.data = res.data['Stations'].sort(function(a, b){
         return a.Name == b.Name ? 0 : +(a.Name > b.Name) || -1;
       })
+
+      // add lines for stations with multiple tracksets
+      var names = [];
+
+      function getLines(station){
+        var colorDisp = {
+          "BL": "Blue",
+          "GR": "Green",
+          "OR": "Orange",
+          "RD": "Red",
+          "SV": "Silver",
+          "YL": "Yellow"
+        };
+        var lines = '';
+        for (var i = 0; i <=4; i++){
+          if (station[LineCode + i]){
+            lines += ' ' + colorDisp[station[LineCode + i]]
+          }
+        }
+        return  '(' + lines + ' )';
+      }
+
+      for (var i = 0; i < landingVm.data.length; i++){
+        if (landingVm.data[i].Name in names){
+          landingVm.data[i-1].Name += getLines(landingVm.data[i-1]);
+          landingVm.data[i].Name += getLines(landingVm.data[i]);
+        }
+        names.push(landingVm.data[i].Name);
+      }
     })
 
     landingVm.getStation = function(){
-      $location.path(landingVm.station.Code)
-    }
-
-    landingVm.switchLines = function(lines){
-      landingVm.displayLines = lines.forEach(function(line){
-        if (line){ return line }
-      })
+      $location.path(landingVm.station.Code);
     }
   }
 

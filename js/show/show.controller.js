@@ -61,6 +61,7 @@
 
     showVm.newNote = new noteFactory();
     showVm.create = function(obj){
+      //need to clean this up
       showVm.newNote.title = obj.title;
       showVm.newNote.author = obj.author;
       showVm.newNote.body = obj.body;

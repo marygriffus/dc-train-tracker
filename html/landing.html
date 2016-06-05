@@ -2,11 +2,9 @@
 <div class="lander">
   <h3>Find your next train.</h3>
 
-  <p>{{landingVm.displayLines}}</p>
-
   <select data-ng-model="landingVm.station" data-ng-options="station.Name for station in landingVm.data">
     {{station}}
-    <option value="" data-ng-mouseover="landingVm.switchLines([station.LineCode1, station.LineCode2, station.LineCode3, station.LineCode4])">
+    <option value="">
       Select station
     </option>
   </select>
