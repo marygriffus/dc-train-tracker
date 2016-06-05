@@ -44,7 +44,6 @@
           landingVm.data[i-1].Name += landingVm.getLines(landingVm.data[i-1]);
           landingVm.data[i].Name += landingVm.getLines(landingVm.data[i]);
         }
-        names.push(landingVm.data[i].Name);
         lastName = landingVm.data[i].Name;
       }
     })
