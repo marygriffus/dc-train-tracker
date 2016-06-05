@@ -20,7 +20,7 @@
       })
 
       // add lines for stations with multiple tracksets
-      function getLines(station){
+      var getLines = function(station){
         var colorDisp = {
           "BL": "Blue",
           "GR": "Green",
