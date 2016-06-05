@@ -46,6 +46,7 @@
         }
         names.push(landingVm.data[i].Name);
       }
+      console.log(names)
     })
 
     landingVm.getStation = function(){
