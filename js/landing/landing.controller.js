@@ -39,13 +39,16 @@
 
       // add lines for stations with multiple tracksets
       var names = [];
+      var lastName = ''
       for (var i = 0; i < landingVm.data.length; i++){
-        if (landingVm.data[i].Name in names){
-          console.log('multiple names')
+        // if (landingVm.data[i].Name in names){
+        //   console.log('multiple names')
+        if (landingVm.data[i].Name == lastName){
           landingVm.data[i-1].Name += landingVm.getLines(landingVm.data[i-1]);
           landingVm.data[i].Name += landingVm.getLines(landingVm.data[i]);
         }
         names.push(landingVm.data[i].Name);
+        last_name = landingVm.data[i].Name;
       }
       console.log(names)
     })
