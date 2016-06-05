@@ -11,6 +11,7 @@
 
   function landingControllerFunc($location, stationFactory){
     var landingVm = this;
+    landingVm.displayLines = ''
 
     //populate the dropdown
     stationFactory
@@ -22,6 +23,12 @@
 
     landingVm.getStation = function(){
       $location.path(landingVm.station.Code)
+    }
+
+    landingVm.switchLines = function(lines){
+      landingVm.displayLines = lines.forEach(function(line){
+        if (line){ return line }
+      })
     }
   }
 
