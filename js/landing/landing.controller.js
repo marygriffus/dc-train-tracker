@@ -23,11 +23,10 @@
       var lines = '';
       for (var j = 0; j <=4; j++){
         if (station['LineCode' + j]){
-          console.log('here' + station['LineCode' + j])
           lines += ' ' + colorDisp[station['LineCode' + j]]
         }
       }
-      return  '(' + lines + ' )';
+      return  ' (' + lines + ' )';
     }
 
     //populate the dropdown
