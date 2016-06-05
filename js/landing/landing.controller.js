@@ -32,6 +32,7 @@
         var lines = '';
         for (var i = 0; i <=4; i++){
           if (station[LineCode + i]){
+            console.log('here' + station[LineCode + i])
             lines += ' ' + colorDisp[station[LineCode + i]]
           }
         }
