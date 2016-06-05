@@ -22,7 +22,7 @@
       <input value="showVm.newNote.title" data-ng-model="showVm.newNote.title" placeholder="Title"></input>
       <input value="showVm.newNote.author" data-ng-model="showVm.newNote.author" placeholder="Author"></input>
       <input value="showVm.newNote.body" data-ng-model="showVm.newNote.body" placeholder="Note"></input>
-      <button data-ng-click="showVm.create({title: showVm.newNote.title, author: showVm.newNote.author, body: showVm.newNote.body})">Leave note</button>
+      <button data-ng-click="showVm.create()">Leave note</button>
     </form>
   </div>
   <note data-ng-repeat="note in showVm.notes"></note>

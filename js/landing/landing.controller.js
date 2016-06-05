@@ -35,7 +35,6 @@
       landingVm.data = res.data['Stations'].sort(function(a, b){
         return a.Name == b.Name ? 0 : +(a.Name > b.Name) || -1;
       })
-
       // add lines for stations with multiple tracksets
       var lastName = ''
       for (var i = 0; i < landingVm.data.length; i++){
