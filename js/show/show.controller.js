@@ -69,11 +69,9 @@
       var year = rawDate.getFullYear();
 
       showVm.newNote.created_at = month + '/' + day + '/' + year
-      console.log(showVm.newNote.created_at)
       showVm.newNote.$save();
       showVm.notes.push(showVm.newNote)
     }
-
 
   }
 })();
