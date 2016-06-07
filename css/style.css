@@ -105,6 +105,10 @@ a {
     width: 95%;
   }
 
+select {
+  margin: 0 auto;
+}
+
   .train,
   .alert,
   .note,
