@@ -101,8 +101,8 @@ a {
 @media (max-width: 600px) {
   body {
     display: block;
-    height: 100vw;
-    width: 100vh;
+    height: 95%;
+    width: 95%;
   }
 
   .train,
