@@ -119,7 +119,10 @@ select {
 
   .tabs {
     height: 4em;
-    width: 32%;
+  }
+
+  .tab {
+    width: 31.5%;
   }
 
   .lander {
