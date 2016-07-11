@@ -18,9 +18,10 @@
   <script src="js/show/note.directive.js"></script>
   <script src="js/landing/landing.controller.js"></script>
   <script src="js/show/show.controller.js"></script>
+  <script src="js/addtohomescreen.min.js"></script>
   <link rel="stylesheet" href="css/style.css" />
-
-  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/addtohomescreen.css" />
+  <link rel="manifest" href="manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="icon" sizes="192x192" href="images/dctt_icon_192.png">
@@ -31,6 +32,12 @@
   <link rel="icon" sizes="36x36" href="images/dctt_icon_36.png">
 
   <base href="/dc-train-tracker/" />
+  <script>
+    addToHomescreen({
+       skipFirstVisit: true,
+       maxDisplayCount: 1
+    });
+  </script>
 </head>
 
 <body data-ng-app="dc-train-tracker">
